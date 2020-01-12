@@ -52,7 +52,7 @@ class Admins extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/admin/")
+      .get("http://51.91.98.162:3013/admin/")
       .then(response => {
         this.setState({ admin: response.data });
       })
@@ -62,7 +62,7 @@ class Admins extends Component {
   }
 
   deleteAdmin(id) {
-    axios.delete("http://localhost:3013/admin/" + id).then(response => {
+    axios.delete("http://51.91.98.162:3013/admin/" + id).then(response => {
       console.log(response.data);
       alert("Student deleted!!");
     });

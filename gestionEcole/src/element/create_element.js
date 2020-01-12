@@ -108,7 +108,7 @@ export default class CreateElement extends Component {
     console.log(element);
 
     axios
-      .post("http://localhost:3013/element/add", element)
+      .post("http://51.91.98.162:3013/element/add", element)
       .then(res => alert("Element added!!"));
 
     window.location = "/list-element";

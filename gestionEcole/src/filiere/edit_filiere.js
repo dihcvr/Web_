@@ -16,7 +16,7 @@ export default class EditFiliere extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3013/filiere/" + this.props.match.params.id)
+      .get("http://51.91.98.162:3013/filiere/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           filiere: response.data.filiere
@@ -43,7 +43,7 @@ export default class EditFiliere extends Component {
 
     axios
       .post(
-        "http://localhost:3013/filiere/update/" + this.props.match.params.id,
+        "http://51.91.98.162:3013/filiere/update/" + this.props.match.params.id,
         filiere
       )
       .then(res => alert("Fil Update!!"));

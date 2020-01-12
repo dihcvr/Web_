@@ -25,7 +25,7 @@ export default class EditEnseignant extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3013/enseignant/" + this.props.match.params.id)
+      .get("http://51.91.98.162:3013/enseignant/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -86,7 +86,8 @@ export default class EditEnseignant extends Component {
 
     axios
       .post(
-        "http://localhost:3013/enseignant/update/" + this.props.match.params.id,
+        "http://51.91.98.162:3013/enseignant/update/" +
+          this.props.match.params.id,
         enseignant
       )
       .then(res => alert("Prof updated !!"));

@@ -45,7 +45,7 @@ export default class EditFiliere extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:3013/filiere/")
+      .get("http://51.91.98.162:3013/filiere/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -58,7 +58,7 @@ export default class EditFiliere extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:3013/enseignant/")
+      .get("http://51.91.98.162:3013/enseignant/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -129,7 +129,7 @@ export default class EditFiliere extends Component {
 
     axios
       .post(
-        "http://localhost:3013/element/update/" + this.props.match.params.id,
+        "http://51.91.98.162:3013/element/update/" + this.props.match.params.id,
         element
       )
       .then(res => alert("Element updated !!"));

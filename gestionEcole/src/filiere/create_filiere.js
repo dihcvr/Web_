@@ -29,7 +29,7 @@ export default class CreateFiliere extends Component {
     console.log(filiere);
 
     axios
-      .post("http://localhost:3013/filiere/add", filiere)
+      .post("http://51.91.98.162:3013/filiere/add", filiere)
       .then(res => alert("Fil added!!"));
 
     window.location = "/list-filiere";

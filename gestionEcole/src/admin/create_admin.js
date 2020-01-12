@@ -68,7 +68,7 @@ export default class CreateAdmin extends Component {
     console.log(admin);
 
     axios
-      .post("http://localhost:3013/admin/add", admin)
+      .post("http://51.91.98.162:3013/admin/add", admin)
       .then(res => alert("Admin added!!"));
 
     window.location = "/list-admin";

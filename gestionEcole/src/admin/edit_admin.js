@@ -25,7 +25,7 @@ export default class EditAdmin extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3013/admin/" + this.props.match.params.id)
+      .get("http://51.91.98.162:3013/admin/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -86,7 +86,7 @@ export default class EditAdmin extends Component {
 
     axios
       .post(
-        "http://localhost:3013/admin/update/" + this.props.match.params.id,
+        "http://51.91.98.162:3013/admin/update/" + this.props.match.params.id,
         admin
       )
       .then(res => alert("Student updated!!"));

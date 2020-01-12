@@ -31,7 +31,7 @@ export default class EditAdmin extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:3013/etudiant/" + this.props.match.params.id)
+      .get("http://51.91.98.162:3013/etudiant/" + this.props.match.params.id)
       .then(response => {
         this.setState({
           cne: response.data.cne,
@@ -49,7 +49,7 @@ export default class EditAdmin extends Component {
       });
 
     axios
-      .get("http://localhost:3013/filiere/")
+      .get("http://51.91.98.162:3013/filiere/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -119,7 +119,8 @@ export default class EditAdmin extends Component {
 
     axios
       .post(
-        "http://localhost:3013/etudiant/update/" + this.props.match.params.id,
+        "http://51.91.98.162:3013/etudiant/update/" +
+          this.props.match.params.id,
         etudiant
       )
       .then(res => alert("Student Updated !!"));

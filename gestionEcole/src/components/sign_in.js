@@ -74,12 +74,12 @@ export default class SignIn extends Component {
       alert("Welcome Admin !!");
     }
     console.log(user);
-    axios.post("http://localhost:3013/admin/loginAdmin", user).then(res => {
+    axios.post("http://51.91.98.162:3013/admin/loginAdmin", user).then(res => {
       if (res.data.error) {
         window.location = "/Dash";
       } else {
         axios
-          .post("http://localhost:3013/Enseignant/loginEnseignant", user)
+          .post("http://51.91.98.162:3013/Enseignant/loginEnseignant", user)
           .then(res => {
             if (res.data.error) {
               window.location = "/Dash";

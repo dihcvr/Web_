@@ -27,7 +27,7 @@ class Dash extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/filiere/")
+      .get("http://51.91.98.162:3013/filiere/")
       .then(response => {
         this.setState({
           filieres: response.data.map(user => user.filiere)
@@ -44,7 +44,7 @@ class Dash extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:3013/admin/")
+      .get("http://51.91.98.162:3013/admin/")
       .then(response => {
         this.setState({
           admins: response.data.map(user => user.username)
@@ -62,7 +62,7 @@ class Dash extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:3013/enseignant/")
+      .get("http://51.91.98.162:3013/enseignant/")
       .then(response => {
         this.setState({
           enseignants: response.data.map(user => user.username)
@@ -79,7 +79,7 @@ class Dash extends Component {
         console.log(error);
       });
     axios
-      .get("http://localhost:3013/etudiant/")
+      .get("http://51.91.98.162:3013/etudiant/")
       .then(response => {
         this.setState({
           etudiants: response.data

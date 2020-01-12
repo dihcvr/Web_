@@ -55,7 +55,7 @@ class Elements extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/element/")
+      .get("http://51.91.98.162:3013/element/")
       .then(response => {
         this.setState({ element: response.data });
       })
@@ -66,7 +66,7 @@ class Elements extends Component {
 
   deleteElement(id) {
     axios
-      .delete("http://localhost:3013/element/delete/" + id)
+      .delete("http://51.91.98.162:3013/element/delete/" + id)
       .then(response => {
         alert("Element Deleted !!");
       });

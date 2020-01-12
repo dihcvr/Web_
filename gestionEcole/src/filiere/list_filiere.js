@@ -48,7 +48,7 @@ class Filieres extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/filiere/")
+      .get("http://51.91.98.162:3013/filiere/")
       .then(response => {
         this.setState({ filiere: response.data });
       })
@@ -59,7 +59,7 @@ class Filieres extends Component {
 
   deleteFiliere(id) {
     axios
-      .delete("http://localhost:3013/filiere/delete/" + id)
+      .delete("http://51.91.98.162:3013/filiere/delete/" + id)
       .then(response => {
         alert("Fil Deleted !!");
       });

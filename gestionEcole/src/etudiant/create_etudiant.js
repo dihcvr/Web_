@@ -32,7 +32,7 @@ export default class CreateEtudiant extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/filiere/")
+      .get("http://51.91.98.162:3013/filiere/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -103,7 +103,7 @@ export default class CreateEtudiant extends Component {
     console.log(etudiant);
 
     axios
-      .post("http://localhost:3013/etudiant/add", etudiant)
+      .post("http://51.91.98.162:3013/etudiant/add", etudiant)
       .then(res => alert("Student Added!!"));
 
     window.location = "/list-etudiant";

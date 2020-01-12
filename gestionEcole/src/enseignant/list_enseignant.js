@@ -53,7 +53,7 @@ class Enseignants extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3013/enseignant/")
+      .get("http://51.91.98.162:3013/enseignant/")
       .then(response => {
         this.setState({ enseignant: response.data });
       })
@@ -64,7 +64,7 @@ class Enseignants extends Component {
 
   deleteEnseignant(id) {
     axios
-      .delete("http://localhost:3013/enseignant/delete/" + id)
+      .delete("http://51.91.98.162:3013/enseignant/delete/" + id)
       .then(response => {
         console.log(response.data);
         alert("Prof deleted !!");

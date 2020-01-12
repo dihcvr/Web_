@@ -68,7 +68,7 @@ export default class CreateEnseignant extends Component {
     console.log(enseignant);
 
     axios
-      .post("http://localhost:3013/enseignant/add", enseignant)
+      .post("http://51.91.98.162:3013/enseignant/add", enseignant)
       .then(res => alert("Prof added!!"));
 
     window.location = "/list-enseignant";
